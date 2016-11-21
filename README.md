@@ -24,4 +24,4 @@ Included detailed information on how to install, configure, and use your project
 
 License Information
 ====================
-This project is licensed as specified in this [file](https://hub.jazz.net/project/spcommunity/odm-sample-template/overview#https://hub.jazz.net/gerrit/plugins/gerritfs/contents/spcommunity%252Fodm-sample-template/refs%252Fheads%252Fmaster/IBMLicense.txt)
+This project is licensed as specified in this [file](https://hub.jazz.net/project/gmolines/dc-xom-extractor/overview#https://hub.jazz.net/git/gmolines%252Fdc-xom-extractor/contents/master/IBMLicense.txt)
