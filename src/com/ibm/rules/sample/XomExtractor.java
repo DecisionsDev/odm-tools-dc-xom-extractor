@@ -22,16 +22,19 @@ public class XomExtractor {
 
         try {
 
+			// connect to Decision Center
             factory.connect(user, password, url, datasource);
             session = factory.getSession();
             session.beginUsage();
 
+            // get the requested project
             IlrRuleProject ruleProject = IlrSessionHelper.getProjectNamed(session, project);
             if (ruleProject == null) {
                 System.err.format("Project not found: '%s' %n", project);
                 return;
             }
 
+            // get the requested baseline, or main if it can't be found
             IlrBaseline baseline;
             if (baselineName != null) {
                 baseline = IlrSessionHelper.getBaselineNamed(session, ruleProject, baselineName);
@@ -44,15 +47,18 @@ public class XomExtractor {
             }
             session.setWorkingBaseline(baseline);
 
+            // builds a query to find all resources
             IlrDefaultSearchCriteria criteria = new IlrDefaultSearchCriteria("Find all resources");
             List<IlrElementDetails> elements = session.findElementDetails(criteria);
 
+            // find the requested XOM within the resources
             IlrResource xom = null;
             for (IlrElementDetails element : elements) {
                 if (element.getName().equals(xomName)) {
                     xom = (IlrResource) element;
                 }
             }
+            // writes the XOM to disk
             if (xom != null) {
                 byte[] xomBytes = xom.getBody();
                 Path path = Paths.get(filePath);
