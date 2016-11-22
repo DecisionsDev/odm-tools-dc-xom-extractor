@@ -23,11 +23,17 @@ IBM ODM 8.8.1 (and later)
 
 Usage Instructions
 ===================
-Clone the git repository locally. In the build.xml file at the root, set the value of the teamserver.home property to the location where you have installed Decision Center.
+Clone the git repository locally.
+
+In the `build.xml` file at the root, set the value of the `teamserver.home` property to the location where you have installed Decision Center.
+
 Then run:
-ant usage to discover the command line argument
-ant compile to compile the java class
-ant [required params] run to execute the extraction
+
+`ant usage` to discover the command line argument
+
+`ant compile` to compile the java class
+
+`ant [required params] run` to execute the extraction
 
 
 
