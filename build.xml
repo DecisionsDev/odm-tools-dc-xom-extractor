@@ -2,7 +2,7 @@
 
 <project basedir="." default="usage">
 
-    <description>TODO</description>
+    <description>ODM Decision Center XOM extractor</description>
 
     <property name="url" value="http://localhost:9080/teamserver"/>
     <property name="datasource" value="jdbc/ilogDataSource"/>
@@ -32,7 +32,15 @@
         <echo message="Targets:"/>
         <echo message="* ant build : compilation"/>
         <echo message="* ant clean : remove classes and output directories"/>
-        <echo message="* ant -Durl=dcurl -Dproject=MyProject ... run"/>
+        <echo message="* ant -Durl=DCurl -Dproject=MyProject ... run"/>
+        <echo message="      with url: the Decision Center URL"/>
+        <echo message="      datasource: the datasource used by Decision Center"/>
+        <echo message="      user: the user login"/>
+        <echo message="      password: the user password"/>
+        <echo message="      project: the project from which to extract the XOM"/>
+        <echo message="      baseline: the name of the baseline from which to extract the XOM"/>
+        <echo message="      xom: the name of the XOM to extract"/>
+        <echo message="      filepath: the name of a local file to which the extracted XOM will be saved to"/>
     </target>
 
     <!-- build -->
