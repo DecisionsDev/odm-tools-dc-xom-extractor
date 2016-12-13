@@ -12,6 +12,8 @@ https://www.ibm.com/support/knowledgecenter/SSQP76_8.8.1/com.ibm.odm.dcenter.ref
 
 However, downloading a copy of the XOM that was used to generate said RuleApp requires using several APIs in sequence. This asset shows how to achieve this.
 
+Moreover, this asset demonstrates how to upload a XOM, so that you can replace the existing one by a version you would have compiled with your toolchain, so that you are sure that the rule artifacts get generated with the exact same xom that was produced by your compilation chain.
+
 
 Software Prerequisites
 ========================
@@ -33,8 +35,9 @@ Then run:
 
 `ant compile` to compile the java class
 
-`ant [required params] run` to execute the extraction
+`ant [required params] download` to execute the extraction
 
+`ant [required params] upload` to execute the upload
 
 
 License Information
