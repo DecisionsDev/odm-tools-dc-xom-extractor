@@ -4,16 +4,16 @@
 
     <description>ODM Decision Center XOM extractor</description>
 
-    <property name="url" value="http://localhost:9080/teamserver"/>
+    <property name="url" value="http://localhost:8080/teamserver"/>
     <property name="datasource" value="jdbc/ilogDataSource"/>
     <property name="user" value="rtsAdmin"/>
     <property name="password" value="rtsAdmin"/>
-    <property name="project" value="CarRental"/>
-    <property name="baseline" value="MyBaseline"/>
-    <property name="xom" value="CarRental_Xom"/>
-    <property name="filepath" value="/Users/johndoe/CarRental_Xom.jar"/>
+    <property name="project" value="loanvalidation-rules-v2"/>
+    <property name="baseline" value="foo"/>
+    <property name="xom" value="loanvalidation-xom"/>
+    <property name="filepath" value="/Users/gmolines/Documents/PA/bizops/odm-tools-dc-xom-extractor/loanvalidation-xom.jar"/>
 
-    <property name="teamserver.home" value="/Users/johndoe/Applications/IBM/ODM89/teamserver"/>
+    <property name="teamserver.home" value="/Users/gmolines/IBM/ODM881/teamserver"/>
     <import file="${teamserver.home}/lib/classpath-teamserver.xml"/>
 
     <property name="src.dir" location="${basedir}/src"/>
@@ -33,7 +33,8 @@
         <echo message="* ant build : compilation"/>
         <echo message="* ant clean : remove classes and output directories"/>
         <echo message="* ant -Durl=DCurl -Dproject=MyProject ... run"/>
-        <echo message="      with url: the Decision Center URL"/>
+        <echo message="      command: the operation to run, download or upload"/>
+        <echo message="      url: the Decision Center URL"/>
         <echo message="      datasource: the datasource used by Decision Center"/>
         <echo message="      user: the user login"/>
         <echo message="      password: the user password"/>
@@ -60,10 +61,17 @@
         <delete dir="${classes.dir}"/>
     </target>
 
-    <!-- run -->
-    <target name="run" depends="build">
+    <!-- download -->
+    <target name="download" depends="build">
         <java classname="com.ibm.rules.sample.XomExtractor" classpathref="sample.classpath" fork="true" failonerror="true" dir=".">
-            <arg line="-url ${url} -datasource ${datasource} -user ${user} -password ${password} -project ${project} -baseline ${baseline} -xom ${xom} -filepath ${filepath}"/>
+            <arg line="-command download -url ${url} -datasource ${datasource} -user ${user} -password ${password} -project ${project} -baseline ${baseline} -xom ${xom} -filepath ${filepath}"/>
+        </java>
+    </target>
+
+    <!-- upload -->
+    <target name="upload" depends="build">
+        <java classname="com.ibm.rules.sample.XomExtractor" classpathref="sample.classpath" fork="true" failonerror="true" dir=".">
+            <arg line="-command upload -url ${url} -datasource ${datasource} -user ${user} -password ${password} -project ${project} -baseline ${baseline} -xom ${xom} -filepath ${filepath}"/>
         </java>
     </target>
 
