@@ -42,4 +42,4 @@ Then run:
 
 License Information
 ====================
-This project is licensed as specified in this [file](https://hub.jazz.net/project/gmolines/dc-xom-extractor/overview#https://hub.jazz.net/git/gmolines%252Fdc-xom-extractor/contents/master/IBMLicense.txt)
+This project is licensed as specified in this [file](https://git.ng.bluemix.net/guilhem.molines/odm-tools-dc-xom-extractor/blob/master/IBMLicense.txt)
