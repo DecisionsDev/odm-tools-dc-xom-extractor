@@ -33,7 +33,7 @@
         <echo message="* ant build : compilation"/>
         <echo message="* ant clean : remove classes and output directories"/>
         <echo message="* ant -Durl=DCurl -Dproject=MyProject ... run"/>
-        <echo message="      command: the operation to run, download or upload"/>
+        <echo message="      command: the operation to run: download or upload"/>
         <echo message="      url: the Decision Center URL"/>
         <echo message="      datasource: the datasource used by Decision Center"/>
         <echo message="      user: the user login"/>
