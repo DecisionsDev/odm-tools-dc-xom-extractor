@@ -7,8 +7,9 @@ If you choose to do so, Decision Center includes both the XOM and the RuleApp up
 
 If you choose to implement an offline deployment strategy, driven by the API calls, you need a convenient way to access the XOM as well as the RuleApp.
 
-Generating a RuleApp on disk, for example, to be able to publish it to a binary artifact repository such as Nexus, Artifactory or Code Station, can easily be achieved through the IlrDeploymentFacility of Decision Center, by using the deployDSRuleAppArchive as documented here:
+Generating a RuleApp on disk, for example, to be able to publish it to a binary artifact repository such as Nexus, Artifactory or Code Station, can easily be achieved through the `IlrDeploymentFacility` of Decision Center, by using the `deployDSRuleAppArchive` as documented here:
 https://www.ibm.com/support/knowledgecenter/SSQP76_8.8.1/com.ibm.odm.dcenter.ref.dc/html/api/html/ilog/rules/teamserver/model/IlrDeploymentFacility.html
+and as demonstrated in the [odm-dc-tools-ruleapp-extractor sample](https://git.ng.bluemix.net/guilhem.molines/odm-tools-dc-ruleapp-extractor)
 
 However, downloading a copy of the XOM that was used to generate said RuleApp requires using several APIs in sequence. This asset shows how to achieve this.
 
@@ -33,7 +34,7 @@ Then run:
 
 `ant usage` to discover the command line argument
 
-`ant compile` to compile the java class
+`ant build` to compile the java class
 
 `ant [required params] download` to execute the extraction
 
