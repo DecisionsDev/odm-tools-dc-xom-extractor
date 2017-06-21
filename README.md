@@ -40,6 +40,9 @@ Then run:
 
 `ant [required params] upload` to execute the upload
 
+Third Parties
+====================
+- [Apache Commons CLI 1.3](https://commons.apache.org/proper/commons-cli/index.html)
 
 License Information
 ====================
