@@ -1,3 +1,8 @@
+# IBM ODM DC XOM Extractor
+
+![GitHub last commit](https://img.shields.io/github/last-commit/ODMDev/odm-tools-dc-xom-extractor)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 Introduction
 ==============
 Since 8.8.1, you can  benefit from the new "XOM deployment in Decision Center" feature, as explained here:
@@ -9,7 +14,7 @@ If you choose to implement an offline deployment strategy, driven by the API cal
 
 Generating a RuleApp on disk, for example, to be able to publish it to a binary artifact repository such as Nexus, Artifactory or Code Station, can easily be achieved through the `IlrDeploymentFacility` of Decision Center, by using the `deployDSRuleAppArchive` as documented here:
 https://www.ibm.com/support/knowledgecenter/SSQP76_8.8.1/com.ibm.odm.dcenter.ref.dc/html/api/html/ilog/rules/teamserver/model/IlrDeploymentFacility.html
-and as demonstrated in the [odm-dc-tools-ruleapp-extractor sample](https://git.ng.bluemix.net/guilhem.molines/odm-tools-dc-ruleapp-extractor)
+and as demonstrated in the [odm-dc-tools-ruleapp-extractor](https://github.com/ODMDev/odm-tools-dc-ruleapp-extractor) sample.
 
 However, downloading a copy of the XOM that was used to generate said RuleApp requires using several APIs in sequence. This asset shows how to achieve this.
 
@@ -44,6 +49,20 @@ Third Parties
 ====================
 - [Apache Commons CLI 1.3](https://commons.apache.org/proper/commons-cli/index.html)
 
-License Information
-====================
-This project is licensed as specified in this [file](https://git.ng.bluemix.net/guilhem.molines/odm-tools-dc-xom-extractor/blob/master/IBMLicense.txt)
+# Notice
+© Copyright IBM Corporation 2020.
+
+# License
+```text
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+````
